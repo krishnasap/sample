@@ -1,0 +1,30 @@
+{
+    "xsappname": "odataapp",
+    "tenant-mode": "dedicated",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.KrishnaDisplay",
+            "description": "To display vendor data"
+        },
+        {
+            "name": "$XSAPPNAME.KrishnaEdit",
+            "description": "To create vendor data"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "Viewer",
+            "description": "View vendor details",
+            "scope-references": [
+                "$XSAPPNAME.KrishnaDisplay"
+            ]
+        },
+        {
+            "name": "Editor",
+            "description": "Edit and create new vendor details",
+            "scope-references": [
+                "$XSAPPNAME.KrishnaEdit"
+            ]
+        }
+    ]
+}
